@@ -229,11 +229,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Facundo\\Documents\\Project\\Sa_Turno_BackEnd\\Sa_Turno_BackEnd\\Sa_Turno_BackEnd.csproj",
+      "projectUniqueName": "C:\\Users\\Facundo\\Desktop\\aasda\\newSaturno-Backend\\Sa_Turno_BackEnd\\Sa_Turno_BackEnd.csproj",
       "projectName": "Sa_Turno_BackEnd",
-      "projectPath": "C:\\Users\\Facundo\\Documents\\Project\\Sa_Turno_BackEnd\\Sa_Turno_BackEnd\\Sa_Turno_BackEnd.csproj",
+      "projectPath": "C:\\Users\\Facundo\\Desktop\\aasda\\newSaturno-Backend\\Sa_Turno_BackEnd\\Sa_Turno_BackEnd.csproj",
       "packagesPath": "C:\\Users\\Facundo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Facundo\\Documents\\Project\\Sa_Turno_BackEnd\\Sa_Turno_BackEnd\\obj\\",
+      "outputPath": "C:\\Users\\Facundo\\Desktop\\aasda\\newSaturno-Backend\\Sa_Turno_BackEnd\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Facundo\\AppData\\Roaming\\NuGet\\NuGet.Config",

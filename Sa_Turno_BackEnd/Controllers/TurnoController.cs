@@ -23,7 +23,7 @@ namespace Sa_Turno_BackEnd.Controllers
                   Id = 2,
                   Fecha = "23/11/2022",
                   Horario = "11:30",
-                  Hash = "75117759a74ea5803d81105bbf338231cc531628",
+                  Hash = "75117759a74ea5803d81105bbf338231cc531628  ",
 
             },
              new Turno
@@ -40,6 +40,16 @@ namespace Sa_Turno_BackEnd.Controllers
         [Route("Listar")]
         public dynamic showTurnos()
         {
+            return turnos;
+        }
+
+
+        [HttpPost]
+        [Route("save")]
+        public dynamic saveTurnos(Turno turno)
+        {
+            turnos.Add(turno);
+
             return turnos;
         }
 

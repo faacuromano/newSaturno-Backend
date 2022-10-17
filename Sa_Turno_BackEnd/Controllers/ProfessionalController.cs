@@ -11,16 +11,30 @@ namespace Sa_Turno_BackEnd.Controllers
     {
         List<Professional> professionals = new List<Professional>
             {
-              new Professional
+              new Professional  
               {
                   Id = 1,
-                  Username = "faacuromano",
+                  Username = "aelohim",
                   Contrasena = "",
-                  Nombre = "Facundo Romanmo",
+                  Nombre = "Aelohim Speciale",
                   Profesion="Programador",
                   Horario="Lun a Jue - 14:00 a 20:00",
                   Direccion="Siempre viva 33",
-                  Telefono="3415322313",
+                  Telefono="123456789",
+                  Ubicacion="Rosario",
+                  Mail="asdasdasd@hotmail.com",
+                  Descripcion="Lorem Ipsum is simply dummy text of the printing and typesetting industry.\"",
+              },
+              new Professional
+              {
+                  Id = 2,
+                  Username = "soficorvalar",
+                  Contrasena = "",
+                  Nombre = "Sofia Corvalan",
+                  Profesion="Programadora",
+                  Horario="Lun a Jue - 7:00 a 15:00",
+                  Direccion="Siempre viva 33",
+                  Telefono="123456789",
                   Ubicacion="Rosario",
                   Mail="asdasdasd@hotmail.com",
                   Descripcion="Lorem Ipsum is simply dummy text of the printing and typesetting industry.\"",
@@ -28,19 +42,33 @@ namespace Sa_Turno_BackEnd.Controllers
               },
               new Professional
               {
-                  Id = 2,
+                  Id = 3,
+                  Username = "matiruiz",
+                  Contrasena = "",
+                  Nombre = "Matias Ruiz",
+                  Profesion="Programador",
+                  Horario="Lun a Jue - 10:00 a 18:00",
+                  Direccion="Siempre viva 33",
+                  Telefono="123456789",
+                  Ubicacion="Rosario",
+                  Mail="asdasdasd@hotmail.com",
+                  Descripcion="Lorem Ipsum is simply dummy text of the printing and typesetting industry.\"",
+              },
+              new Professional
+              {
+                  Id = 4,
                   Username = "faacuromano",
                   Contrasena = "",
                   Nombre = "Facundo Romanmo",
                   Profesion="Programador",
-                  Horario="Lun a Jue - 14:00 a 20:00",
+                  Horario="Lun a Jue - 09:00 a 15:00",
                   Direccion="Siempre viva 33",
-                  Telefono="3415322313",
+                  Telefono="123456789",
                   Ubicacion="Rosario",
                   Mail="asdasdasd@hotmail.com",
                   Descripcion="Lorem Ipsum is simply dummy text of the printing and typesetting industry.\"",
+              },
 
-              }
             };
 
         [HttpGet]

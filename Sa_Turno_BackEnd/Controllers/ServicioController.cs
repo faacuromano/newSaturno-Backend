@@ -28,5 +28,15 @@ namespace Sa_Turno_BackEnd.Controllers
             return servicios;
         }
 
+
+        [HttpPost]
+        [Route("save")]
+        public dynamic saveServicios(Servicio servicio)
+        {
+            servicios.Add(servicio);
+
+            return servicios;
+        }
+
     }
 }

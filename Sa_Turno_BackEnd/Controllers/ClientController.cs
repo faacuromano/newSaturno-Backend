@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Sa_Turno_BackEnd.Entitys;
+using System.Linq;
 using System.Xml.Linq;
 
 namespace Sa_Turno_BackEnd.Controllers
@@ -47,7 +48,7 @@ namespace Sa_Turno_BackEnd.Controllers
 
         [HttpPost]
         [Route("save")]
-        public dynamic saveProfessional(Client client, string name)
+        public dynamic saveProfessional(Client client)
         {
             clients.Add(client);
 
@@ -59,7 +60,6 @@ namespace Sa_Turno_BackEnd.Controllers
         public dynamic modifyNameClients(int id, string nombre)
         {
             clients = clients.Where(x => x.Id == id).ToList();
-
 
             return clients;
         }
