@@ -9,7 +9,7 @@ ___
 [<img src ="https://img.shields.io/badge/Website-pk-%23.svg?&style=for-the-badge&logo=&logoColor=white%22">](https://FacsAs.github.io/)  
 
  
-I am Pratik! I am working on projects related to data science and deep learning.
+Somos SATURNO, una WebApp en progreso que busca agilizar la manera en la que se toman turnos via web en la Argentina.
 - 👨🏽‍💻 Actualmente en progreso. 
 - 🤝 Pronta fecha de lanzamiento
 - 🌐 Visitanos en nuestra Web App [porfolio website](https://FacsAs.github.io/).
