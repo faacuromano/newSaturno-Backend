@@ -1,6 +1,6 @@
-﻿namespace Sa_Turno_BackEnd.Entitys
+﻿namespace Sa_Turno_BackEnd.Models
 {
-    public class Servicio
+    public class AddServicioRequest
     {
         public int Id { get; set; }
         public string Nombre { get; set; }

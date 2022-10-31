@@ -1,76 +1,85 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Sa_Turno_BackEnd.Entitys;
+using Sa_Turno_BackEnd.Models;
+using Sa_Turno_BackEnd.Repository;
 using System.Linq;
 using System.Xml.Linq;
 
 namespace Sa_Turno_BackEnd.Controllers
 {
+   [Route("[controller]")]
    [ApiController]
-   [Route("client")]
    public class ClientController : ControllerBase
    {
-        List<Client> clients = new List<Client>
-           {
-           new Client
-           {
-                  Id = 1,
-                  Username = "faacuromano",
-                  Contrasena = "",
-                  Nombre = "Facundo Romanmo",
-                  Telefono="3415322313",
-           },
+        private readonly IClientRepository _clientRepository;
 
-           new Client
-           {
-                  Id = 2,
-                  Username = "faacuromano",
-                  Contrasena = "",
-                  Nombre = "Facundo Romanmo",
-                  Telefono="3415322313",
-            },
-           new Client
-           {
-                  Id = 3,
-                  Username = "faacuromano",
-                  Contrasena = "",
-                  Nombre = "Facundo Romanmo",
-                  Telefono="3415322313",
-            },
+        public ClientController(IClientRepository clientRepository)
+        {
+            _clientRepository = clientRepository;
+        }
 
-           };
-
-       [HttpGet]
-       [Route("list")]
-       public dynamic showClients()
+       [HttpPost]
+        public IActionResult AddClient(AddClientRequest dtoClient)
        {
-           return clients;
-       }
+            try
+            {
+                List<Client> clients = _clientRepository.GetAll();
+                Client client = new Client()
+                {
+                    Id = clients.Max(x => x.Id) + 1,
+                    Username = dtoClient.Username,
+                    Password = dtoClient.Password,
+                    Nombre = dtoClient.Nombre,
+                    Telefono = dtoClient.Username,
+                };
+                _clientRepository.Add(client);
 
-        [HttpPost]
-        [Route("save")]
-        public dynamic saveProfessional(Client client)
-        {
-            clients.Add(client);
-
-            return clients;
+                Sa_Turno_BackEnd.Models.ClientResponse response = new Sa_Turno_BackEnd.Models.ClientResponse()
+                {
+                    Id = clients.Max(x => x.Id) + 1,
+                    Username = dtoClient.Username,
+                    Password = dtoClient.Password,
+                    Nombre = dtoClient.Nombre,
+                };
+                return Created("Sucessfully created", response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
-        [HttpPut]
-        [Route("modify/{id}/{nombre}")]
-        public dynamic modifyNameClients(int id, string nombre)
+        [HttpGet]
+        public IActionResult GetAll()
         {
-            clients = clients.Where(x => x.Id == id).ToList();
-
-            return clients;
+            try
+            {
+                List<Client> clients = _clientRepository.GetAll();
+                List<Sa_Turno_BackEnd.Models.ClientResponse> response = new List<Sa_Turno_BackEnd.Models.ClientResponse>();
+                foreach (var client in clients)
+                {
+                    response.Add(
+                        new Sa_Turno_BackEnd.Models.ClientResponse()
+                        {
+                            Id = client.Id, 
+                            Username = client.Username,
+                            Password = client.Password,
+                        }
+                    );
+                }
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
-        [HttpDelete]
-        [Route("delete/{id}")]
-        public dynamic deleteClients(int id)
+        [HttpGet]
+        [Route("{id}")]
+        public IActionResult GetOne(int id)
         {
-            var clients_new = clients.Where(x => x.Id != id).ToList();
-            clients = clients_new;
-            return clients;
+            return Ok(_clientRepository.Get(id));
         }
     }
 }

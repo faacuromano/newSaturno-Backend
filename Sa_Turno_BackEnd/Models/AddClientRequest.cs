@@ -1,8 +1,10 @@
-﻿namespace Sa_Turno_BackEnd.Entitys
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Sa_Turno_BackEnd.Models
 {
-    public class Client
+    public class AddClientRequest
     {
-        public int Id { get; set; }
+        [MaxLength(10)]
         public string Username { get; set; }
         public string Password { get; set; }
         public string Nombre { get; set; }

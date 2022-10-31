@@ -1,42 +1,85 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Sa_Turno_BackEnd.Entitys;
+using Sa_Turno_BackEnd.Models;
+using Sa_Turno_BackEnd.Repository;
+using System.Linq;
+using System.Xml.Linq;
 
 namespace Sa_Turno_BackEnd.Controllers
 {
+    [Route("[controller]")]
     [ApiController]
-    [Route("servicios")]
-
     public class ServicioController : ControllerBase
     {
-        List<Servicio> servicios = new List<Servicio>
-           {
-            new Servicio
-            {
-                  Id = 1,
-                  Nombre = "Corte de pelo",
-                  Profesional = "Roberto el peluquero",
-                  Cliente = "Ramon el cliente",
-                  Fecha="23/11/2022 - 11:30",
-                  Precio= 800,
-            },
-           };
+        private readonly IServicioRepository _servicioRepository;
 
-        [HttpGet]
-        [Route("Listar")]
-        public dynamic showServices() {
-
-            return servicios;
+        public ServicioController(IServicioRepository servicioRepository)
+        {
+            _servicioRepository = servicioRepository;
         }
-
 
         [HttpPost]
-        [Route("save")]
-        public dynamic saveServicios(Servicio servicio)
+        public IActionResult AddServicio(AddServicioRequest dtoServicio)
         {
-            servicios.Add(servicio);
+            try
+            {
+                List<Servicio> servicios = _servicioRepository.GetAll();
+                Servicio servicio = new Servicio()
+                {
+                    Id = servicios.Max(x => x.Id) + 1,
+                    Nombre = dtoServicio.Nombre,
+                    Profesional = dtoServicio.Profesional,
+                    Cliente = dtoServicio.Cliente,
+                    Precio = dtoServicio.Precio
+                };
+                    _servicioRepository.Add(servicio);
 
-            return servicios;
+                ServicioResponse response = new ServicioResponse()
+                {
+                    Id = servicios.Max(x => x.Id) + 1,
+ 
+                };
+                return Created("Sucessfully created", response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            try
+            {
+                List<Servicio> servicios = _servicioRepository.GetAll();
+                List<Sa_Turno_BackEnd.Models.ServicioResponse> response = new List<Sa_Turno_BackEnd.Models.ServicioResponse>();
+                foreach (var servicio in servicios)
+                {
+                    response.Add(
+                        new Sa_Turno_BackEnd.Models.ServicioResponse()
+                        {
+                            Id = servicio.Id,
+                            Nombre = servicio.Nombre,
+                            Profesional = servicio.Profesional,
+                            Cliente = servicio.Cliente,
+                            Precio = servicio.Precio
+                        }
+                    );
+                }
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
+        [HttpGet]
+        [Route("{id}")]
+        public IActionResult GetOne(int id)
+        {
+            return Ok(_servicioRepository.Get(id));
+        }
     }
 }
+

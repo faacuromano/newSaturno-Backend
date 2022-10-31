@@ -1,66 +1,87 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Sa_Turno_BackEnd.Entitys;
+using Sa_Turno_BackEnd.Models;
+using Sa_Turno_BackEnd.Repository;
+using System.Linq;
+using System.Xml.Linq;
 
 namespace Sa_Turno_BackEnd.Controllers
 {
+    [Route("[controller]")]
     [ApiController]
-    [Route("turnos")]
-
     public class TurnoController : ControllerBase
     {
-        List<Turno> turnos = new List<Turno>
-           {
-            new Turno
-            {
-                  Id = 1,
-                  Fecha = "23/11/2022",
-                  Horario = "11:30",
-                  Hash = "0e90d91d7c53a786eec0873324be56d7d304f4d9",
+        private readonly ITurnoRepository _turnoRepository;
 
-            },
-            new Turno
-            {
-                  Id = 2,
-                  Fecha = "23/11/2022",
-                  Horario = "11:30",
-                  Hash = "75117759a74ea5803d81105bbf338231cc531628  ",
-
-            },
-             new Turno
-            {
-                  Id = 3,
-                  Fecha = "23/11/2022",
-                  Horario = "11:30",
-                  Hash = "85136c79cbf9fe36bb9d05d0639c70c265c18d37",
-            },
-           };
-
-
-        [HttpGet]
-        [Route("Listar")]
-        public dynamic showTurnos()
+        public TurnoController(ITurnoRepository turnoRepository)
         {
-            return turnos;
+            _turnoRepository = turnoRepository;
         }
-
 
         [HttpPost]
-        [Route("save")]
-        public dynamic saveTurnos(Turno turno)
+        public IActionResult AddTurno(AddTurnoRequest dtoTurno)
         {
-            turnos.Add(turno);
+            try
+            {
+                List<Turno> turnos = _turnoRepository.GetAll();
+                Turno turno = new Turno()
+                {
+                    Id = turnos.Max(x => x.Id) + 1,
+                    Fecha = dtoTurno.Fecha,
+                    Horario = dtoTurno.Horario,
+                    Hash = dtoTurno.Hash,
+                } ;
+                _turnoRepository.Add(turno);
 
-            return turnos;
+                TurnoResponse response = new TurnoResponse()
+                {
+                    Id = turnos.Max(x => x.Id) + 1,
+                    Fecha = dtoTurno.Fecha,
+                    Horario = dtoTurno.Horario,
+                    Hash = dtoTurno.Hash,
+                };
+                return Created("Sucessfully created", response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
-        [HttpDelete]
-        [Route("delete/{id}")]
-        public dynamic deleteTurno(int id)
-        {
-            var turno_deleted = turnos.Where(x => x.Id != id).ToList();
-            turnos = turno_deleted;
-            return turnos;
-        }
+        [HttpGet]
+            public IActionResult GetAll()
+            {
+                try
+                {
+                    List<Turno> turnos = _turnoRepository.GetAll();
+                    List<Sa_Turno_BackEnd.Models.TurnoResponse> response = new List<Sa_Turno_BackEnd.Models.TurnoResponse>();
+                    foreach (var turno in turnos)
+                    {
+                        response.Add(
+                            new Sa_Turno_BackEnd.Models.TurnoResponse()
+                            {
+                                Id = turno.Id,
+                                Fecha = turno.Fecha,
+                                Horario = turno.Horario,
+                            }
+                        );
+                    }
+                    return Ok(response);
+                }
+                catch (Exception ex)
+                {
+                    return BadRequest(ex.Message);
+                }
+            }
+
+            [HttpGet]
+            [Route("{id}")]
+            public IActionResult GetOne(int id)
+            {
+                return Ok(_turnoRepository.Get(id));
+            }
+
+        
 
     }
 }
