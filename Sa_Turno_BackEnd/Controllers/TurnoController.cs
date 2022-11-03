@@ -35,7 +35,7 @@ namespace Sa_Turno_BackEnd.Controllers
 
                 TurnoResponse response = new TurnoResponse()
                 {
-                    Id = turnos.Max(x => x.Id) + 1,
+                    Id = turnos.Max(x => x.Id),
                     Fecha = dtoTurno.Fecha,
                     Horario = dtoTurno.Horario,
                     Hash = dtoTurno.Hash,
@@ -60,7 +60,7 @@ namespace Sa_Turno_BackEnd.Controllers
                         response.Add(
                             new Sa_Turno_BackEnd.Models.TurnoResponse()
                             {
-                                Id = turno.Id,
+                                Id = turno.Id ,
                                 Fecha = turno.Fecha,
                                 Horario = turno.Horario,
                             }

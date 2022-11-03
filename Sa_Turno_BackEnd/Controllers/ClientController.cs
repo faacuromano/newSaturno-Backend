@@ -36,7 +36,7 @@ namespace Sa_Turno_BackEnd.Controllers
 
                 Sa_Turno_BackEnd.Models.ClientResponse response = new Sa_Turno_BackEnd.Models.ClientResponse()
                 {
-                    Id = clients.Max(x => x.Id) + 1,
+                    Id = clients.Max(x => x.Id) ,
                     Username = dtoClient.Username,
                     Password = dtoClient.Password,
                     Nombre = dtoClient.Nombre,
@@ -61,7 +61,7 @@ namespace Sa_Turno_BackEnd.Controllers
                     response.Add(
                         new Sa_Turno_BackEnd.Models.ClientResponse()
                         {
-                            Id = client.Id, 
+                            Id = client.Id , 
                             Username = client.Username,
                             Password = client.Password,
                         }

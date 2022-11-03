@@ -86,3 +86,12 @@ C:\Users\Facundo\Desktop\Sa_Turno_Project - V1.3.1\newSaturno_Backend Injected\S
 C:\Users\Facundo\Desktop\Sa_Turno_Project - V1.3.1\newSaturno_Backend Injected\Sa_Turno_BackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\Facundo\Desktop\Sa_Turno_Project - V1.3.1\newSaturno_Backend Injected\Sa_Turno_BackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Facundo\Desktop\Sa_Turno_Project - V1.3.1\newSaturno_Backend Injected\Sa_Turno_BackEnd\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Facundo\Desktop\Sa_Turno_Project - V1.3.1\newSaturno_Backend Injected\Sa_Turno_BackEnd\bin\Debug\net6.0\Microsoft.Data.Sqlite.dll
+C:\Users\Facundo\Desktop\Sa_Turno_Project - V1.3.1\newSaturno_Backend Injected\Sa_Turno_BackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Facundo\Desktop\Sa_Turno_Project - V1.3.1\newSaturno_Backend Injected\Sa_Turno_BackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Facundo\Desktop\Sa_Turno_Project - V1.3.1\newSaturno_Backend Injected\Sa_Turno_BackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Facundo\Desktop\Sa_Turno_Project - V1.3.1\newSaturno_Backend Injected\Sa_Turno_BackEnd\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Sqlite.dll
+C:\Users\Facundo\Desktop\Sa_Turno_Project - V1.3.1\newSaturno_Backend Injected\Sa_Turno_BackEnd\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Facundo\Desktop\Sa_Turno_Project - V1.3.1\newSaturno_Backend Injected\Sa_Turno_BackEnd\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Facundo\Desktop\Sa_Turno_Project - V1.3.1\newSaturno_Backend Injected\Sa_Turno_BackEnd\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Facundo\Desktop\Sa_Turno_Project - V1.3.1\newSaturno_Backend Injected\Sa_Turno_BackEnd\bin\Debug\net6.0\SQLitePCLRaw.core.dll

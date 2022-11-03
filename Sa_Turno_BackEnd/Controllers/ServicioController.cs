@@ -36,7 +36,7 @@ namespace Sa_Turno_BackEnd.Controllers
 
                 ServicioResponse response = new ServicioResponse()
                 {
-                    Id = servicios.Max(x => x.Id) + 1,
+                    Id = servicios.Max(x => x.Id),
  
                 };
                 return Created("Sucessfully created", response);
@@ -58,7 +58,7 @@ namespace Sa_Turno_BackEnd.Controllers
                     response.Add(
                         new Sa_Turno_BackEnd.Models.ServicioResponse()
                         {
-                            Id = servicio.Id,
+                            Id = servicio.Id ,
                             Nombre = servicio.Nombre,
                             Profesional = servicio.Profesional,
                             Cliente = servicio.Cliente,
