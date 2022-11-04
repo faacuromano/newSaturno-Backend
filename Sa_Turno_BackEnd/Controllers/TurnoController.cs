@@ -30,7 +30,7 @@ namespace Sa_Turno_BackEnd.Controllers
                     Fecha = dtoTurno.Fecha,
                     Horario = dtoTurno.Horario,
                     Hash = dtoTurno.Hash,
-                } ;
+                };
                 _turnoRepository.Add(turno);
 
                 TurnoResponse response = new TurnoResponse()
@@ -49,39 +49,64 @@ namespace Sa_Turno_BackEnd.Controllers
         }
 
         [HttpGet]
-            public IActionResult GetAll()
+        public IActionResult GetAll()
+        {
+            try
             {
-                try
+                List<Turno> turnos = _turnoRepository.GetAll();
+                List<Sa_Turno_BackEnd.Models.TurnoResponse> response = new List<Sa_Turno_BackEnd.Models.TurnoResponse>();
+                foreach (var turno in turnos)
                 {
-                    List<Turno> turnos = _turnoRepository.GetAll();
-                    List<Sa_Turno_BackEnd.Models.TurnoResponse> response = new List<Sa_Turno_BackEnd.Models.TurnoResponse>();
-                    foreach (var turno in turnos)
-                    {
-                        response.Add(
-                            new Sa_Turno_BackEnd.Models.TurnoResponse()
-                            {
-                                Id = turno.Id,
-                                Fecha = turno.Fecha,
-                                Horario = turno.Horario,
-                            }
-                        );
-                    }
-                    return Ok(response);
+                    response.Add(
+                        new Sa_Turno_BackEnd.Models.TurnoResponse()
+                        {
+                            Id = turno.Id,
+                            Fecha = turno.Fecha,
+                            Horario = turno.Horario,
+                        }
+                    );
                 }
-                catch (Exception ex)
-                {
-                    return BadRequest(ex.Message);
-                }
+                return Ok(response);
             }
-
-            [HttpGet]
-            [Route("{id}")]
-            public IActionResult GetOne(int id)
+            catch (Exception ex)
             {
-                return Ok(_turnoRepository.Get(id));
+                return BadRequest(ex.Message);
             }
+        }
 
-        
+        [HttpGet]
+        [Route("{id}")]
+        public IActionResult GetOne(int id)
+        {
+            return Ok(_turnoRepository.Get(id));
+        }
 
+        [HttpDelete]
+        [Route("delete/{id}")]
+        public IActionResult DeleteTurno(int id)
+        {
+            try
+            {
+                List<Turno> turnos = _turnoRepository.DeleteTurno(id);
+                List<Sa_Turno_BackEnd.Models.TurnoResponse> response = new List<Sa_Turno_BackEnd.Models.TurnoResponse>();
+                foreach (var turno in turnos)
+                {
+                    response.Add(
+                        new Sa_Turno_BackEnd.Models.TurnoResponse()
+                        {
+                            Id = turno.Id,
+                            Fecha = turno.Fecha,
+                            Horario = turno.Horario,
+                            Hash = turno.Hash
+                        }
+                    );
+                }
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Facundo\\Desktop\\Sa_Turno_Project - V1.3.1\\newSaturno_Backend Injected\\Sa_Turno_BackEnd\\Sa_Turno_BackEnd.csproj": {}
+    "C:\\Users\\Facundo\\Desktop\\PROG 3\\newSaturno-Backend\\Sa_Turno_BackEnd\\Sa_Turno_BackEnd.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Facundo\\Desktop\\Sa_Turno_Project - V1.3.1\\newSaturno_Backend Injected\\Sa_Turno_BackEnd\\Sa_Turno_BackEnd.csproj": {
+    "C:\\Users\\Facundo\\Desktop\\PROG 3\\newSaturno-Backend\\Sa_Turno_BackEnd\\Sa_Turno_BackEnd.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Facundo\\Desktop\\Sa_Turno_Project - V1.3.1\\newSaturno_Backend Injected\\Sa_Turno_BackEnd\\Sa_Turno_BackEnd.csproj",
+        "projectUniqueName": "C:\\Users\\Facundo\\Desktop\\PROG 3\\newSaturno-Backend\\Sa_Turno_BackEnd\\Sa_Turno_BackEnd.csproj",
         "projectName": "Sa_Turno_BackEnd",
-        "projectPath": "C:\\Users\\Facundo\\Desktop\\Sa_Turno_Project - V1.3.1\\newSaturno_Backend Injected\\Sa_Turno_BackEnd\\Sa_Turno_BackEnd.csproj",
+        "projectPath": "C:\\Users\\Facundo\\Desktop\\PROG 3\\newSaturno-Backend\\Sa_Turno_BackEnd\\Sa_Turno_BackEnd.csproj",
         "packagesPath": "C:\\Users\\Facundo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Facundo\\Desktop\\Sa_Turno_Project - V1.3.1\\newSaturno_Backend Injected\\Sa_Turno_BackEnd\\obj\\",
+        "outputPath": "C:\\Users\\Facundo\\Desktop\\PROG 3\\newSaturno-Backend\\Sa_Turno_BackEnd\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Facundo\\AppData\\Roaming\\NuGet\\NuGet.Config",

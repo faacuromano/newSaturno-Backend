@@ -9,6 +9,8 @@ namespace Sa_Turno_BackEnd.Repository
         public List<Client> GetAll();
 
         public void Add(Client client);
+
+        public List<Client> Delete(int id);
     }
 }
     

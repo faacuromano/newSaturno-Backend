@@ -80,6 +80,36 @@ namespace Sa_Turno_BackEnd.Controllers
         {
             return Ok(_servicioRepository.Get(id));
         }
+
+        [HttpDelete]
+        [Route("/delete/{id}")]
+
+        public IActionResult Delete(int id)
+        {
+            try
+            {
+                List<Servicio> servicios = _servicioRepository.Delete(id);
+                List<Sa_Turno_BackEnd.Models.ServicioResponse> response = new List<Sa_Turno_BackEnd.Models.ServicioResponse>();
+                foreach (var servicio in servicios)
+                {
+                    response.Add(
+                        new Sa_Turno_BackEnd.Models.ServicioResponse()
+                        {
+                            Id = servicio.Id,
+                            Nombre = servicio.Nombre,
+                            Profesional = servicio.Profesional,
+                            Cliente = servicio.Cliente,
+                            Precio = servicio.Precio
+                        }
+                    );
+                }
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }
 

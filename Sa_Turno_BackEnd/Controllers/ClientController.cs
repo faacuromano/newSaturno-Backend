@@ -81,5 +81,33 @@ namespace Sa_Turno_BackEnd.Controllers
         {
             return Ok(_clientRepository.Get(id));
         }
+
+        [HttpDelete]
+        [Route("delete/{id}")]
+        public IActionResult Delete(int id)
+        {
+            try
+            {
+                List<Client> clients = _clientRepository.Delete(id);
+                List<Sa_Turno_BackEnd.Models.ClientResponse> response = new List<Sa_Turno_BackEnd.Models.ClientResponse>();
+                foreach (var client in clients)
+                {
+                    response.Add(
+                        new Sa_Turno_BackEnd.Models.ClientResponse()
+                        {
+                            Id = client.Id,
+                            Username=client.Username,
+                        }
+                    );
+                }
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+
     }
 }

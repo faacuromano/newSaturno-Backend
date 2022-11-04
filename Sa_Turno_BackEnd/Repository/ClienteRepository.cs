@@ -47,5 +47,12 @@ namespace Sa_Turno_BackEnd.Repository
         {
             FakeClients.Add(client);
         }
+
+        public List<Client> Delete(int id)
+        {
+            return FakeClients.Where(x => x.Id != id).ToList();
+
+
+        }
     }
 }

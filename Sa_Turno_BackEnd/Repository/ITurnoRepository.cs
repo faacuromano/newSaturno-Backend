@@ -1,6 +1,5 @@
 ﻿using Sa_Turno_BackEnd.Entitys;
 
-
 namespace Sa_Turno_BackEnd.Repository
 {
     public interface ITurnoRepository
@@ -10,5 +9,7 @@ namespace Sa_Turno_BackEnd.Repository
         public List<Turno> GetAll();
 
         public void Add(Turno turno);
+
+        public List<Turno> DeleteTurno(int id);
     }
 }

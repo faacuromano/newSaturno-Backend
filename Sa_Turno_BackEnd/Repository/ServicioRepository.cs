@@ -1,5 +1,6 @@
 ﻿using Sa_Turno_BackEnd.Entitys;
 
+
 namespace Sa_Turno_BackEnd.Repository
 {
     public class ServicioRepository : IServicioRepository
@@ -46,6 +47,13 @@ namespace Sa_Turno_BackEnd.Repository
         public void Add(Servicio servicio)
         {
             FakeServicios.Add(servicio);
+        }
+
+        public List<Servicio> Delete(int id)
+        {
+            FakeServicios.RemoveAll(x => x.Id == id);
+            return FakeServicios;
+
         }
     }
 }
