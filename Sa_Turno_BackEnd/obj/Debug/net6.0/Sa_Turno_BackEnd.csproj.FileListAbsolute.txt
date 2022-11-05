@@ -120,3 +120,37 @@ C:\Users\Facundo\Desktop\PROG 3\newSaturno-Backend\Sa_Turno_BackEnd\obj\Debug\ne
 C:\Users\Facundo\Desktop\PROG 3\newSaturno-Backend\Sa_Turno_BackEnd\obj\Debug\net6.0\Sa_Turno_BackEnd.pdb
 C:\Users\Facundo\Desktop\PROG 3\newSaturno-Backend\Sa_Turno_BackEnd\obj\Debug\net6.0\Sa_Turno_BackEnd.genruntimeconfig.cache
 C:\Users\Facundo\Desktop\PROG 3\newSaturno-Backend\Sa_Turno_BackEnd\obj\Debug\net6.0\ref\Sa_Turno_BackEnd.dll
+C:\Users\Matias\Documents\Facultad\programacion\lab3\saturno-facu\Sa_Turno\Sa_Turno_BackEnd\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Matias\Documents\Facultad\programacion\lab3\saturno-facu\Sa_Turno\Sa_Turno_BackEnd\bin\Debug\net6.0\appsettings.json
+C:\Users\Matias\Documents\Facultad\programacion\lab3\saturno-facu\Sa_Turno\Sa_Turno_BackEnd\bin\Debug\net6.0\Sa_Turno_BackEnd.exe
+C:\Users\Matias\Documents\Facultad\programacion\lab3\saturno-facu\Sa_Turno\Sa_Turno_BackEnd\bin\Debug\net6.0\Sa_Turno_BackEnd.deps.json
+C:\Users\Matias\Documents\Facultad\programacion\lab3\saturno-facu\Sa_Turno\Sa_Turno_BackEnd\bin\Debug\net6.0\Sa_Turno_BackEnd.runtimeconfig.json
+C:\Users\Matias\Documents\Facultad\programacion\lab3\saturno-facu\Sa_Turno\Sa_Turno_BackEnd\bin\Debug\net6.0\Sa_Turno_BackEnd.dll
+C:\Users\Matias\Documents\Facultad\programacion\lab3\saturno-facu\Sa_Turno\Sa_Turno_BackEnd\bin\Debug\net6.0\Sa_Turno_BackEnd.pdb
+C:\Users\Matias\Documents\Facultad\programacion\lab3\saturno-facu\Sa_Turno\Sa_Turno_BackEnd\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Matias\Documents\Facultad\programacion\lab3\saturno-facu\Sa_Turno\Sa_Turno_BackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Matias\Documents\Facultad\programacion\lab3\saturno-facu\Sa_Turno\Sa_Turno_BackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Matias\Documents\Facultad\programacion\lab3\saturno-facu\Sa_Turno\Sa_Turno_BackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Matias\Documents\Facultad\programacion\lab3\saturno-facu\Sa_Turno\Sa_Turno_BackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Matias\Documents\Facultad\programacion\lab3\saturno-facu\Sa_Turno\Sa_Turno_BackEnd\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Matias\Documents\Facultad\programacion\lab3\saturno-facu\Sa_Turno\Sa_Turno_BackEnd\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\Matias\Documents\Facultad\programacion\lab3\saturno-facu\Sa_Turno\Sa_Turno_BackEnd\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Matias\Documents\Facultad\programacion\lab3\saturno-facu\Sa_Turno\Sa_Turno_BackEnd\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Matias\Documents\Facultad\programacion\lab3\saturno-facu\Sa_Turno\Sa_Turno_BackEnd\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Matias\Documents\Facultad\programacion\lab3\saturno-facu\Sa_Turno\Sa_Turno_BackEnd\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Matias\Documents\Facultad\programacion\lab3\saturno-facu\Sa_Turno\Sa_Turno_BackEnd\obj\Debug\net6.0\Sa_Turno_BackEnd.csproj.AssemblyReference.cache
+C:\Users\Matias\Documents\Facultad\programacion\lab3\saturno-facu\Sa_Turno\Sa_Turno_BackEnd\obj\Debug\net6.0\Sa_Turno_BackEnd.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Matias\Documents\Facultad\programacion\lab3\saturno-facu\Sa_Turno\Sa_Turno_BackEnd\obj\Debug\net6.0\Sa_Turno_BackEnd.AssemblyInfoInputs.cache
+C:\Users\Matias\Documents\Facultad\programacion\lab3\saturno-facu\Sa_Turno\Sa_Turno_BackEnd\obj\Debug\net6.0\Sa_Turno_BackEnd.AssemblyInfo.cs
+C:\Users\Matias\Documents\Facultad\programacion\lab3\saturno-facu\Sa_Turno\Sa_Turno_BackEnd\obj\Debug\net6.0\Sa_Turno_BackEnd.csproj.CoreCompileInputs.cache
+C:\Users\Matias\Documents\Facultad\programacion\lab3\saturno-facu\Sa_Turno\Sa_Turno_BackEnd\obj\Debug\net6.0\Sa_Turno_BackEnd.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Matias\Documents\Facultad\programacion\lab3\saturno-facu\Sa_Turno\Sa_Turno_BackEnd\obj\Debug\net6.0\Sa_Turno_BackEnd.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Matias\Documents\Facultad\programacion\lab3\saturno-facu\Sa_Turno\Sa_Turno_BackEnd\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Matias\Documents\Facultad\programacion\lab3\saturno-facu\Sa_Turno\Sa_Turno_BackEnd\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Matias\Documents\Facultad\programacion\lab3\saturno-facu\Sa_Turno\Sa_Turno_BackEnd\obj\Debug\net6.0\scopedcss\bundle\Sa_Turno_BackEnd.styles.css
+C:\Users\Matias\Documents\Facultad\programacion\lab3\saturno-facu\Sa_Turno\Sa_Turno_BackEnd\obj\Debug\net6.0\Sa_Turno_BackEnd.csproj.CopyComplete
+C:\Users\Matias\Documents\Facultad\programacion\lab3\saturno-facu\Sa_Turno\Sa_Turno_BackEnd\obj\Debug\net6.0\Sa_Turno_BackEnd.dll
+C:\Users\Matias\Documents\Facultad\programacion\lab3\saturno-facu\Sa_Turno\Sa_Turno_BackEnd\obj\Debug\net6.0\refint\Sa_Turno_BackEnd.dll
+C:\Users\Matias\Documents\Facultad\programacion\lab3\saturno-facu\Sa_Turno\Sa_Turno_BackEnd\obj\Debug\net6.0\Sa_Turno_BackEnd.pdb
+C:\Users\Matias\Documents\Facultad\programacion\lab3\saturno-facu\Sa_Turno\Sa_Turno_BackEnd\obj\Debug\net6.0\Sa_Turno_BackEnd.genruntimeconfig.cache
+C:\Users\Matias\Documents\Facultad\programacion\lab3\saturno-facu\Sa_Turno\Sa_Turno_BackEnd\obj\Debug\net6.0\ref\Sa_Turno_BackEnd.dll

@@ -70,9 +70,12 @@ namespace Sa_Turno_BackEnd
                 options.AddDefaultPolicy(
                     policy =>
                     {
+                        
                         policy.WithOrigins("http://localhost:3000",
                                             "*");
-                    });
+                        policy.AllowAnyMethod();
+                        policy.AllowAnyHeader();
+            });
             });
 
             builder.Services.AddControllers();
