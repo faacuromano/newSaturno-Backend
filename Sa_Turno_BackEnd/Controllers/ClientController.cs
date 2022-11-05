@@ -39,10 +39,10 @@ namespace Sa_Turno_BackEnd.Controllers
                 Sa_Turno_BackEnd.Models.ClientResponse response = new Sa_Turno_BackEnd.Models.ClientResponse()
                 {
                     Id = clients.Max(x => x.Id) + 1,
-                    Nombre = dtoClient.Nombre,
                     Username = dtoClient.UserName,
+                    Nombre = dtoClient.Nombre,
+                    Ubication = dtoClient.Ubication,
                     Email = dtoClient.Email,
-                    Ubication = dtoClient.Ubication
                 };
                 return Created("Sucessfully created", response);
             }
@@ -67,7 +67,6 @@ namespace Sa_Turno_BackEnd.Controllers
                             Id = client.Id, 
                             Nombre = client.Nombre,
                             Username = client.UserName,
-                            Ubication = client.Ubication,
                         }
                     );
                 }
@@ -112,16 +111,17 @@ namespace Sa_Turno_BackEnd.Controllers
         [Route("{id}")]
         public IActionResult Edit(int id, AddClientRequest dtoClient)
         {
+            var cliente = _clientRepository.Get(id);
             List<Client> clients = _clientRepository.Delete(id);
             Client client = new Client()
             {
                 Id = id,
-                Email = dtoClient.Email,
                 Nombre = dtoClient.Nombre,
-                Password = dtoClient.Password,
-                PhoneNumber = dtoClient.PhoneNumber,
-                Ubication = dtoClient.Ubication,
                 UserName = dtoClient.UserName,
+                Email = cliente.Email,
+                Password = cliente.Password,
+                PhoneNumber = cliente.PhoneNumber,
+                Ubication = cliente.Ubication,
             };
             _clientRepository.Add(client);
 
