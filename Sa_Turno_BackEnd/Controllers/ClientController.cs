@@ -19,7 +19,7 @@ namespace Sa_Turno_BackEnd.Controllers
         }
 
        [HttpPost]
-        public IActionResult AddClient(AddClientRequest dtoClient)
+        public IActionResult AddClient([FromBody] AddClientRequest dtoClient)
        {
             try
             {
