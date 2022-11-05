@@ -12,7 +12,6 @@ namespace Sa_Turno_BackEnd.Repository
 
         public Client? Login(string username, string password);
 
-
         public List<Client> Delete(int id);
     }
 }

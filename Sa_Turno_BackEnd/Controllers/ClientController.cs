@@ -88,12 +88,19 @@ namespace Sa_Turno_BackEnd.Controllers
         {
             try
             {
-                
-                return Ok(_clientRepository.Login(username, password));
+                if(_clientRepository.Login(username, password) != null)
+                {
+                    return Ok(_clientRepository.Login(username, password));
+                }
+                else
+                {
+                    return Ok("Usuario no encontrado");
+                }
+
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                return BadRequest(ex.Message + "exepcion");
             }
         }
 
