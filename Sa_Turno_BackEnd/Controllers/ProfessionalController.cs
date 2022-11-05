@@ -66,7 +66,7 @@ namespace Sa_Turno_BackEnd.Controllers
                   Direccion="San Luis 2073",
                   Telefono="341-6799909",
                   Ubicacion="Rosario",
-                  Mail="asdasdasd@hotmail.com",
+                  Mail="asdasdsd@hotmail.com",
                   Descripcion="En el Yeite tenemos todos los equipos que tu banda puede llegar a necesitar para ensayar o grabar. Alquilamos platillos. Cerveza bien fría.",
                   FotoPerfil="https://scontent.fros9-1.fna.fbcdn.net/v/t39.30808-6/292409105_436811015121009_1794291114756506121_n.png?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeEs6vJ_bR0bNpdQTAsNsQbzyugzbXcD6hrK6DNtdwPqGpbi8CWIJYlEhFlSba5iq40&_nc_ohc=Q1PrPo9SxaYAX82jXmk&_nc_ht=scontent.fros9-1.fna&oh=00_AfBDyqryTH2ZOx-ghg5Orb_ga6wKzwttodDu0qjkXBmeQA&oe=636A6EC3",
                   FotoPortada="https://scontent.fros9-2.fna.fbcdn.net/v/t39.30808-6/292524349_436811011787676_4697193701284965411_n.png?_nc_cat=104&ccb=1-7&_nc_sid=e3f864&_nc_eui2=AeEkzPUsJSOsl9VfxnYyHgcFF0u3Jp2-w4EXS7cmnb7DgYq_y8TGHZxWiw8HwkRSn9g&_nc_ohc=dPNpp561b3YAX9RuOiT&tn=ErmeG5QLHlxc1M9Z&_nc_ht=scontent.fros9-2.fna&oh=00_AfDi9gJITZF_SYbFOV5AF9lqM-KnRXnSUapg_6jOBeww7A&oe=636A3A7F"
