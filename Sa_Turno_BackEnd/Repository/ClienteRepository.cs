@@ -10,7 +10,7 @@ namespace Sa_Turno_BackEnd.Repository
            {
                   Id = 1,
                   Username = "faacuromano",
-                  Password = "",
+                  Password = "123",
                   Nombre = "Facundo Romanmo",
                   Telefono="3415322313",
            },
@@ -18,16 +18,16 @@ namespace Sa_Turno_BackEnd.Repository
            new Client
            {
                   Id = 2,
-                  Username = "faacuromano",
-                  Password = "",
+                  Username = "soficorvalan",
+                  Password = "123",
                   Nombre = "Facundo Romanmo",
                   Telefono="3415322313",
             },
            new Client
            {
                   Id = 3,
-                  Username = "faacuromano",
-                  Password = "",
+                  Username = "matiruiz",
+                  Password = "123",
                   Nombre = "Facundo Romanmo",
                   Telefono="3415322313",
             },
@@ -46,6 +46,11 @@ namespace Sa_Turno_BackEnd.Repository
         public void Add(Client client)
         {
             FakeClients.Add(client);
+        }
+
+        public Client? Login(string username, string password)
+        {
+            return FakeClients.FirstOrDefault(u => u.Username == username && u.Password == password);
         }
 
         public List<Client> Delete(int id)

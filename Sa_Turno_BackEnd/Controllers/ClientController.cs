@@ -82,6 +82,21 @@ namespace Sa_Turno_BackEnd.Controllers
             return Ok(_clientRepository.Get(id));
         }
 
+        [HttpGet]
+        [Route("login")]
+        public IActionResult Login(string username, string password)
+        {
+            try
+            {
+                
+                return Ok(_clientRepository.Login(username, password));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
         [HttpPut]
         [Route("{id}")]
         public IActionResult Edit(int id, AddClientRequest dtoClient)
