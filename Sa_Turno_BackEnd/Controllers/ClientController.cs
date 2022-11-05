@@ -64,8 +64,9 @@ namespace Sa_Turno_BackEnd.Controllers
                         new Sa_Turno_BackEnd.Models.ClientResponse()
                         {
                             Id = client.Id, 
+                            Nombre = client.Nombre,
                             Username = client.UserName,
-                            Password = client.Password,
+                            Password = client.Ubication,
                         }
                     );
                 }
