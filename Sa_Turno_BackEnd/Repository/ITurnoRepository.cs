@@ -10,6 +10,7 @@ namespace Sa_Turno_BackEnd.Repository
 
         public void Add(Turno turno);
 
-        public List<Turno> DeleteTurno(int id);
+
+        public List<Turno> Delete(int id);
     }
 }

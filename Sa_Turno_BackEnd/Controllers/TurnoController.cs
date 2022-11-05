@@ -81,27 +81,32 @@ namespace Sa_Turno_BackEnd.Controllers
             return Ok(_turnoRepository.Get(id));
         }
 
+        [HttpPut]
+        [Route("{id}")]
+        public IActionResult Edit(int id, AddTurnoRequest dtoTurno)
+        {
+            List<Turno> turnos = _turnoRepository.Delete(id);
+            Turno turno = new Turno()
+            {
+                Id = id,
+                Fecha = dtoTurno.Fecha,
+                Horario = dtoTurno.Horario,
+                Hash = dtoTurno.Hash,
+            };
+            _turnoRepository.Add(turno);
+           
+            return Ok(turno);
+        }
+
         [HttpDelete]
-        [Route("delete/{id}")]
-        public IActionResult DeleteTurno(int id)
+        [Route("{id}")]
+        public IActionResult Deleasdte(int id)
         {
             try
             {
-                List<Turno> turnos = _turnoRepository.DeleteTurno(id);
-                List<Sa_Turno_BackEnd.Models.TurnoResponse> response = new List<Sa_Turno_BackEnd.Models.TurnoResponse>();
-                foreach (var turno in turnos)
-                {
-                    response.Add(
-                        new Sa_Turno_BackEnd.Models.TurnoResponse()
-                        {
-                            Id = turno.Id,
-                            Fecha = turno.Fecha,
-                            Horario = turno.Horario,
-                            Hash = turno.Hash
-                        }
-                    );
-                }
-                return Ok(response);
+                List<Turno> turnos = _turnoRepository.Delete(id);
+             
+                return Ok("Turno ID" + "[" + id + "]"+ "---> Eliminado correctamente.");
             }
             catch (Exception ex)
             {

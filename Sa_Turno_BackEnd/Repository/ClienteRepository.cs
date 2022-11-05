@@ -50,8 +50,8 @@ namespace Sa_Turno_BackEnd.Repository
 
         public List<Client> Delete(int id)
         {
-            return FakeClients.Where(x => x.Id != id).ToList();
-
+            FakeClients.RemoveAll(x => x.Id == id);
+            return FakeClients;
 
         }
     }

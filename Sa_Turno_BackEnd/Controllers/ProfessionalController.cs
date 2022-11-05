@@ -11,62 +11,58 @@ namespace Sa_Turno_BackEnd.Controllers
     {
         List<Professional> professionals = new List<Professional>
             {
-              new Professional  
+              new Professional
               {
                   Id = 1,
-                  Username = "aelohim",
-                  Contrasena = "",
-                  Nombre = "Aelohim Speciale",
-                  Profesion="Programador",
-                  Horario="Lun a Jue - 14:00 a 20:00",
-                  Direccion="Siempre viva 33",
-                  Telefono="123456789",
+                  Username = "megatlon",
+                  Nombre = "Megatlón",
+                  Profesion="Gimnasio",
+                  Horario="Lun a Sab - 7:00 a 23:00",
+                  Direccion="Tucumán 1239",
+                  Telefono="0341-5282703",
                   Ubicacion="Rosario",
-                  Mail="asdasdasd@hotmail.com",
-                  Descripcion="Lorem Ipsum is simply dummy text of the printing and typesetting industry.\"",
+                  Mail="rosario@megatlon.com.ar",
+                  Descripcion="La misión de Megatlon es mejorar la calidad de vida de las personas a través de la actividad física y el desarrollo de los vínculos sociales, y su visión es la de ser la empresa de gimnasios y servicios deportivos líder en todos los mercados donde esté presente.\r\n\r\nMegatlon es la marca líder y de mayor prestigio, reconocida en su segmento de actividad por ser top of mind para el 80% de la población adulta de Buenos Aires.\r\n\r\nRespeto, pasión, prioridad por el cliente, profesionalismo y credibilidad son los valores principales que refleja la organización.",
               },
               new Professional
               {
                   Id = 2,
-                  Username = "soficorvalar",
-                  Contrasena = "",
-                  Nombre = "Sofia Corvalan",
-                  Profesion="Programadora",
-                  Horario="Lun a Jue - 7:00 a 15:00",
-                  Direccion="Siempre viva 33",
-                  Telefono="123456789",
+                  Username = "aledemelo",
+                  Nombre = "Ale de Melo",
+                  Profesion="Peluquería",
+                  Horario="Lun a sabado - 9:00 a 18:00",
+                  Direccion="M. Moreno 1434",
+                  Telefono="0341-6371858",
                   Ubicacion="Rosario",
-                  Mail="asdasdasd@hotmail.com",
-                  Descripcion="Lorem Ipsum is simply dummy text of the printing and typesetting industry.\"",
+                  Mail="info@aledemelo.com.ar",
+                  Descripcion="Somos un equipo de peluqueros altamente calificados. Es por eso que nuestro salón ha llegado a convertirse en un referente en el mundo de la moda.En Ale de Melo estamos convencidos de nuestro concepto. La belleza proviene del interior. Cada individuo es único. Es por eso que todos tenemos que tener la oportunidad de transformar nuestra belleza propia, interna y única en belleza externa.",
 
               },
               new Professional
               {
                   Id = 3,
                   Username = "matiruiz",
-                  Contrasena = "",
-                  Nombre = "Matias Ruiz",
-                  Profesion="Programador",
-                  Horario="Lun a Jue - 10:00 a 18:00",
-                  Direccion="Siempre viva 33",
-                  Telefono="123456789",
+                  Nombre = "Ortodoncia Rosario",
+                  Profesion="Odontología",
+                  Horario="Lun a Vie - 9:00 a 18:00",
+                  Direccion="Córdoba 940",
+                  Telefono="341-5993558",
                   Ubicacion="Rosario",
-                  Mail="asdasdasd@hotmail.com",
-                  Descripcion="Lorem Ipsum is simply dummy text of the printing and typesetting industry.\"",
+                  Mail="info@ortodonciarosario.com.ar",
+                  Descripcion="Bienvenido a Ortodoncia Rosario. Te esperamos para que seas atendido por una familia de profesionales de la salud bucal con el objetivo de ayudarte a alinear y/o nivelar tus dientes y mejorar tu sonrisa y estética.",
               },
               new Professional
               {
                   Id = 4,
-                  Username = "faacuromano",
-                  Contrasena = "",
-                  Nombre = "Facundo Romanmo",
-                  Profesion="Programador",
-                  Horario="Lun a Jue - 09:00 a 15:00",
-                  Direccion="Siempre viva 33",
-                  Telefono="123456789",
+                  Username = "el-yeite",
+                  Nombre = "El Yeite",
+                  Profesion="Sala de ensayo",
+                  Horario="Lun a vie - 15:00 a 23:00",
+                  Direccion="San Luis 2073",
+                  Telefono="341-6799909",
                   Ubicacion="Rosario",
                   Mail="asdasdasd@hotmail.com",
-                  Descripcion="Lorem Ipsum is simply dummy text of the printing and typesetting industry.\"",
+                  Descripcion="En el Yeite tenemos todos los equipos que tu banda puede llegar a necesitar para ensayar o grabar. Alquilamos platillos. Cerveza bien fría.",
               },
 
             };
@@ -86,9 +82,9 @@ namespace Sa_Turno_BackEnd.Controllers
             return professionals;
         }
 
-        [HttpPut]
-        [Route("modify/{id}/{nombre}")]
-        public dynamic modifyNameClients(int id, string nombre)
+        [HttpGet]
+        [Route("{id}")]
+        public dynamic GetOne(int id)
         {
             professionals = professionals.Where(x => x.Id == id).ToList();
 

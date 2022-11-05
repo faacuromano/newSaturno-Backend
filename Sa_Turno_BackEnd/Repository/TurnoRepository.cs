@@ -46,9 +46,11 @@ namespace Sa_Turno_BackEnd.Repository
             FakeTurnos.Add(turno);
         }
 
-        public List<Turno> DeleteTurno(int id)
+
+        public List<Turno> Delete(int id)
         {
-            return FakeTurnos.Where(x => x.Id != id).ToList();
+            FakeTurnos.RemoveAll(x => x.Id == id);
+            return FakeTurnos;
 
         }
 
