@@ -9,8 +9,8 @@ namespace Sa_Turno_BackEnd.Repository
            new Client
            {
                 Id = 1,
-                Email = "asd@hotmail.com",
-                Nombre = "Facundo Romanmo",
+                Email = "Facundo.Romano@hotmail.com",
+                Nombre = "Facundo Romano",
                 Password = "12345",
                 PhoneNumber = "3415322313",
                 Ubication = "Rosario",
@@ -20,8 +20,8 @@ namespace Sa_Turno_BackEnd.Repository
            new Client
            {
                 Id = 2,
-                Email = "asd@hotmail.com",
-                Nombre = "Facundo Romanmo",
+                Email = "Aelohim.Griazzaro@hotmail.com",
+                Nombre = "Aelohim Griazzaro",
                 Password = "12345",
                 PhoneNumber = "3415322313",
                 Ubication = "Rosario",
@@ -30,8 +30,8 @@ namespace Sa_Turno_BackEnd.Repository
            new Client
            {
                 Id = 3,
-                Email = "asd@hotmail.com",
-                Nombre = "Facundo Romanmo",
+                Email = "Matias.Ruiz@hotmail.com",
+                Nombre = "Matias Ruiz",
                 Password = "12345",
                 PhoneNumber = "3415322313",
                 Ubication = "Rosario",
@@ -40,8 +40,8 @@ namespace Sa_Turno_BackEnd.Repository
            new Client
            {
                 Id = 4,
-                Email = "asd@hotmail.com",
-                Nombre = "Facundo Romanmo",
+                Email = "Sofia.Corvalan@hotmail.com",
+                Nombre = "Sofia Corvalan",
                 Password = "12345",
                 PhoneNumber = "3415322313",
                 Ubication = "Rosario",

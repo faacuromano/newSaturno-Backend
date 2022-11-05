@@ -39,9 +39,10 @@ namespace Sa_Turno_BackEnd.Controllers
                 Sa_Turno_BackEnd.Models.ClientResponse response = new Sa_Turno_BackEnd.Models.ClientResponse()
                 {
                     Id = clients.Max(x => x.Id) + 1,
-                    Username = dtoClient.UserName,
-                    Password = dtoClient.Password,
                     Nombre = dtoClient.Nombre,
+                    Username = dtoClient.UserName,
+                    Email = dtoClient.Email,
+                    Ubication = dtoClient.Ubication
                 };
                 return Created("Sucessfully created", response);
             }
@@ -66,7 +67,7 @@ namespace Sa_Turno_BackEnd.Controllers
                             Id = client.Id, 
                             Nombre = client.Nombre,
                             Username = client.UserName,
-                            Password = client.Ubication,
+                            Ubication = client.Ubication,
                         }
                     );
                 }
