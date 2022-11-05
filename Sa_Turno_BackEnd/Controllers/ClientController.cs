@@ -96,7 +96,7 @@ namespace Sa_Turno_BackEnd.Controllers
                 }
                 else
                 {
-                    return Ok("Usuario no encontrado");
+                    return NoContent();
                 }
 
             }
