@@ -81,6 +81,24 @@ namespace Sa_Turno_BackEnd.Controllers
             return Ok(_servicioRepository.Get(id));
         }
 
+        [HttpPut]
+        [Route("{id}")]
+        public IActionResult Edit(int id, AddServicioRequest dtoServicio)
+        {
+            List<Servicio> servicios = _servicioRepository.Delete(id);
+            Servicio servicio = new Servicio()
+            {
+                Id = servicios.Max(x => x.Id) + 1,
+                Nombre = dtoServicio.Nombre,
+                Profesional = dtoServicio.Profesional,
+                Cliente = dtoServicio.Cliente,
+                Precio = dtoServicio.Precio
+            };
+            _servicioRepository.Add(servicio);
+
+            return Ok(servicio);
+        }
+
         [HttpDelete]
         [Route("{id}")]
         public IActionResult Delete(int id)

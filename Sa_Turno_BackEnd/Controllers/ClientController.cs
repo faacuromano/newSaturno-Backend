@@ -82,6 +82,24 @@ namespace Sa_Turno_BackEnd.Controllers
             return Ok(_clientRepository.Get(id));
         }
 
+        [HttpPut]
+        [Route("{id}")]
+        public IActionResult Edit(int id, AddClientRequest dtoClient)
+        {
+            List<Client> clients = _clientRepository.Delete(id);
+            Client client = new Client()
+            {
+                Id = id,
+                Username = dtoClient.Username,
+                Password = dtoClient.Password,
+                Nombre = dtoClient.Nombre,
+                Telefono = dtoClient.Username,
+            };
+            _clientRepository.Add(client);
+
+            return Ok(client);
+        }
+
         [HttpDelete]
         [Route("{id}")]
         public IActionResult DeleteTurno(int id)
