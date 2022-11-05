@@ -9,8 +9,8 @@ namespace Sa_Turno_BackEnd.Repository
            new Client
            {
                   Id = 1,
-                  Username = "faacuromano",
-                  Password = "123",
+                  Username = "facuro",
+                  Password = "12345",
                   Nombre = "Facundo Romanmo",
                   Telefono="3415322313",
            },
@@ -18,8 +18,8 @@ namespace Sa_Turno_BackEnd.Repository
            new Client
            {
                   Id = 2,
-                  Username = "soficorvalan",
-                  Password = "123",
+                  Username = "soficorva",
+                  Password = "12345",
                   Nombre = "Facundo Romanmo",
                   Telefono="3415322313",
             },
@@ -27,7 +27,15 @@ namespace Sa_Turno_BackEnd.Repository
            {
                   Id = 3,
                   Username = "matiruiz",
-                  Password = "123",
+                  Password = "12345",
+                  Nombre = "Facundo Romanmo",
+                  Telefono="3415322313",
+            },
+           new Client
+           {
+                  Id = 4,
+                  Username = "aelo",
+                  Password = "12345",
                   Nombre = "Facundo Romanmo",
                   Telefono="3415322313",
             },
