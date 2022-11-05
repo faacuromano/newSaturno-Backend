@@ -53,7 +53,7 @@ namespace Sa_Turno_BackEnd.Controllers
                   Ubicacion="Rosario",
                   Mail="info@ortodonciarosario.com.ar",
                   Descripcion="Bienvenido a Ortodoncia Rosario. Te esperamos para que seas atendido por una familia de profesionales de la salud bucal con el objetivo de ayudarte a alinear y/o nivelar tus dientes y mejorar tu sonrisa y estética.",
-                  FotoPerfil="https://scontent.fros9-2.fna.fbcdn.net/v/t39.30808-6/291323800_431319099004946_6961230187146325336_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeH0PZ_tZsN1aIc8G-grwtUxdWuvvnumwkV1a6--e6bCRUFlIBqMQXrCk0Y9w3RvLOA&_nc_ohc=_sAJL6CCQzIAX_bDGPj&_nc_ht=scontent.fros9-2.fna&oh=00_AfC4r6JfsWEOkHcsRPgmDHKnPwWyPyFIidt_81hJernWeA&oe=6369B51D",
+                  FotoPerfil="https://scontent.fros9-1.fna.fbcdn.net/v/t39.30808-6/305019212_2371173523038033_6488024530444082669_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeHdusAdAnulfive2M4R-h7smuhcqTqUbKia6FypOpRsqLdtAGJL4UsXQ6ZTH66f2ME&_nc_ohc=T7MzJaNcU30AX8CNskA&tn=ErmeG5QLHlxc1M9Z&_nc_ht=scontent.fros9-1.fna&oh=00_AfCMQXyyKbh4d1PbrpO2Ykobr2zzbgSFZAralrioihFg6Q&oe=636A3564",
                   FotoPortada="https://scontent.fros9-2.fna.fbcdn.net/v/t39.30808-6/305481421_2371173799704672_8217648126840987850_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=e3f864&_nc_eui2=AeF59GmfvERoh04MT3YOOv3hLQFzH5vDQWwtAXMfm8NBbIFls562_CNkV8QD-BKvKPU&_nc_ohc=o0bIptN3N88AX9LN6E5&_nc_ht=scontent.fros9-2.fna&oh=00_AfCUL-DNOgs0e4sAlh4LbBW7ALC044uAiz8apbO3Qgtxgw&oe=636AD42F"
               },
               new Professional
@@ -68,7 +68,7 @@ namespace Sa_Turno_BackEnd.Controllers
                   Ubicacion="Rosario",
                   Mail="asdasdasd@hotmail.com",
                   Descripcion="En el Yeite tenemos todos los equipos que tu banda puede llegar a necesitar para ensayar o grabar. Alquilamos platillos. Cerveza bien fría.",
-                  FotoPerfil="https://scontent.fros9-2.fna.fbcdn.net/v/t39.30808-6/291323800_431319099004946_6961230187146325336_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeH0PZ_tZsN1aIc8G-grwtUxdWuvvnumwkV1a6--e6bCRUFlIBqMQXrCk0Y9w3RvLOA&_nc_ohc=_sAJL6CCQzIAX_bDGPj&_nc_ht=scontent.fros9-2.fna&oh=00_AfC4r6JfsWEOkHcsRPgmDHKnPwWyPyFIidt_81hJernWeA&oe=6369B51D",
+                  FotoPerfil="https://scontent.fros9-1.fna.fbcdn.net/v/t39.30808-6/292409105_436811015121009_1794291114756506121_n.png?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeEs6vJ_bR0bNpdQTAsNsQbzyugzbXcD6hrK6DNtdwPqGpbi8CWIJYlEhFlSba5iq40&_nc_ohc=Q1PrPo9SxaYAX82jXmk&_nc_ht=scontent.fros9-1.fna&oh=00_AfBDyqryTH2ZOx-ghg5Orb_ga6wKzwttodDu0qjkXBmeQA&oe=636A6EC3",
                   FotoPortada="https://scontent.fros9-2.fna.fbcdn.net/v/t39.30808-6/292524349_436811011787676_4697193701284965411_n.png?_nc_cat=104&ccb=1-7&_nc_sid=e3f864&_nc_eui2=AeEkzPUsJSOsl9VfxnYyHgcFF0u3Jp2-w4EXS7cmnb7DgYq_y8TGHZxWiw8HwkRSn9g&_nc_ohc=dPNpp561b3YAX9RuOiT&tn=ErmeG5QLHlxc1M9Z&_nc_ht=scontent.fros9-2.fna&oh=00_AfDi9gJITZF_SYbFOV5AF9lqM-KnRXnSUapg_6jOBeww7A&oe=636A3A7F"
               },
 
