@@ -8,36 +8,44 @@ namespace Sa_Turno_BackEnd.Repository
         {
            new Client
            {
-                  Id = 1,
-                  Username = "facuro",
-                  Password = "12345",
-                  Nombre = "Facundo Romanmo",
-                  Telefono="3415322313",
+                Id = 1,
+                Email = "asd@hotmail.com",
+                Nombre = "Facundo Romanmo",
+                Password = "12345",
+                PhoneNumber = "3415322313",
+                Ubication = "Rosario",
+                UserName = "facuro",
            },
 
            new Client
            {
-                  Id = 2,
-                  Username = "soficorva",
-                  Password = "12345",
-                  Nombre = "Facundo Romanmo",
-                  Telefono="3415322313",
+                Id = 2,
+                Email = "asd@hotmail.com",
+                Nombre = "Facundo Romanmo",
+                Password = "12345",
+                PhoneNumber = "3415322313",
+                Ubication = "Rosario",
+                UserName = "aeloh",
             },
            new Client
            {
-                  Id = 3,
-                  Username = "matiruiz",
-                  Password = "12345",
-                  Nombre = "Facundo Romanmo",
-                  Telefono="3415322313",
+                Id = 3,
+                Email = "asd@hotmail.com",
+                Nombre = "Facundo Romanmo",
+                Password = "12345",
+                PhoneNumber = "3415322313",
+                Ubication = "Rosario",
+                UserName = "matiruiz",
             },
            new Client
            {
-                  Id = 4,
-                  Username = "aelo",
-                  Password = "12345",
-                  Nombre = "Facundo Romanmo",
-                  Telefono="3415322313",
+                Id = 4,
+                Email = "asd@hotmail.com",
+                Nombre = "Facundo Romanmo",
+                Password = "12345",
+                PhoneNumber = "3415322313",
+                Ubication = "Rosario",
+                UserName = "soficorva",
             },
         };
 
@@ -58,7 +66,7 @@ namespace Sa_Turno_BackEnd.Repository
 
         public Client? Login(string username, string password)
         {
-            return FakeClients.FirstOrDefault(u => u.Username == username && u.Password == password);
+            return FakeClients.FirstOrDefault(u => u.UserName == username && u.Password == password);
         }
 
         public List<Client> Delete(int id)

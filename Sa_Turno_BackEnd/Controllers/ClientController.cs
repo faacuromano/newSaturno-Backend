@@ -26,18 +26,20 @@ namespace Sa_Turno_BackEnd.Controllers
                 List<Client> clients = _clientRepository.GetAll();
                 Client client = new Client()
                 {
-                    Id = clients.Max(x => x.Id) + 1,
-                    Username = dtoClient.Username,
-                    Password = dtoClient.Password,
-                    Nombre = dtoClient.Nombre,
-                    Telefono = dtoClient.Username,
+                 Id = clients.Max(x => x.Id) + 1,
+                 Email = dtoClient.Email,
+                 Nombre = dtoClient.Nombre,
+                 Password = dtoClient.Password,
+                 PhoneNumber = dtoClient.PhoneNumber,
+                 Ubication = dtoClient.Ubication,
+                 UserName = dtoClient.UserName,
                 };
                 _clientRepository.Add(client);
 
                 Sa_Turno_BackEnd.Models.ClientResponse response = new Sa_Turno_BackEnd.Models.ClientResponse()
                 {
                     Id = clients.Max(x => x.Id) + 1,
-                    Username = dtoClient.Username,
+                    Username = dtoClient.UserName,
                     Password = dtoClient.Password,
                     Nombre = dtoClient.Nombre,
                 };
@@ -62,7 +64,7 @@ namespace Sa_Turno_BackEnd.Controllers
                         new Sa_Turno_BackEnd.Models.ClientResponse()
                         {
                             Id = client.Id, 
-                            Username = client.Username,
+                            Username = client.UserName,
                             Password = client.Password,
                         }
                     );
@@ -112,10 +114,12 @@ namespace Sa_Turno_BackEnd.Controllers
             Client client = new Client()
             {
                 Id = id,
-                Username = dtoClient.Username,
-                Password = dtoClient.Password,
+                Email = dtoClient.Email,
                 Nombre = dtoClient.Nombre,
-                Telefono = dtoClient.Username,
+                Password = dtoClient.Password,
+                PhoneNumber = dtoClient.PhoneNumber,
+                Ubication = dtoClient.Ubication,
+                UserName = dtoClient.UserName,
             };
             _clientRepository.Add(client);
 
