@@ -9,13 +9,13 @@ namespace Sa_Turno_BackEnd.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class ServicioController : ControllerBase
+    public class ServiceController : ControllerBase
     {
-        private readonly IServicioRepository _servicioRepository;
+        private readonly IServiceRepository _serviceRepository;
 
-        public ServicioController(IServicioRepository servicioRepository)
+        public ServiceController(IServiceRepository serviceRepository)
         {
-            _servicioRepository = servicioRepository;
+            _serviceRepository = serviceRepository;
         }
 
         [HttpPost]
@@ -23,20 +23,19 @@ namespace Sa_Turno_BackEnd.Controllers
         {
             try
             {
-                List<Servicio> servicios = _servicioRepository.GetAll();
-                Servicio servicio = new Servicio()
+                List<Service> services = _serviceRepository.GetAll();
+                Service servicio = new Service()
                 {
-                    Id = servicios.Max(x => x.Id) + 1,
-                    Nombre = dtoServicio.Nombre,
-                    Profesional = dtoServicio.Profesional,
+                    Id = services.Max(x => x.Id) + 1,
+                    Name = dtoServicio.Nombre,
                     Cliente = dtoServicio.Cliente,
-                    Precio = dtoServicio.Precio
+                    Price = dtoServicio.Precio
                 };
-                    _servicioRepository.Add(servicio);
+                    _serviceRepository.Add(servicio);
 
                 ServicioResponse response = new ServicioResponse()
                 {
-                    Id = servicios.Max(x => x.Id) + 1,
+                    Id = services.Max(x => x.Id) + 1,
  
                 };
                 return Created("Sucessfully created", response);
@@ -51,7 +50,7 @@ namespace Sa_Turno_BackEnd.Controllers
         {
             try
             {
-                List<Servicio> servicios = _servicioRepository.GetAll();
+                List<Service> servicios = _serviceRepository.GetAll();
                 List<Sa_Turno_BackEnd.Models.ServicioResponse> response = new List<Sa_Turno_BackEnd.Models.ServicioResponse>();
                 foreach (var servicio in servicios)
                 {
@@ -59,10 +58,9 @@ namespace Sa_Turno_BackEnd.Controllers
                         new Sa_Turno_BackEnd.Models.ServicioResponse()
                         {
                             Id = servicio.Id,
-                            Nombre = servicio.Nombre,
-                            Profesional = servicio.Profesional,
+                            Nombre = servicio.Name,
                             Cliente = servicio.Cliente,
-                            Precio = servicio.Precio
+                            Precio = servicio.Price
                         }
                     );
                 }
@@ -78,23 +76,22 @@ namespace Sa_Turno_BackEnd.Controllers
         [Route("{id}")]
         public IActionResult GetOne(int id)
         {
-            return Ok(_servicioRepository.Get(id));
+            return Ok(_serviceRepository.Get(id));
         }
 
         [HttpPut]
         [Route("{id}")]
         public IActionResult Edit(int id, AddServicioRequest dtoServicio)
         {
-            List<Servicio> servicios = _servicioRepository.Delete(id);
-            Servicio servicio = new Servicio()
+            List<Service> servicios = _serviceRepository.Delete(id);
+            Service servicio = new Service()
             {
                 Id = servicios.Max(x => x.Id) + 1,
-                Nombre = dtoServicio.Nombre,
-                Profesional = dtoServicio.Profesional,
+                Name = dtoServicio.Nombre,
                 Cliente = dtoServicio.Cliente,
-                Precio = dtoServicio.Precio
+                Price = dtoServicio.Precio
             };
-            _servicioRepository.Add(servicio);
+            _serviceRepository.Add(servicio);
 
             return Ok(servicio);
         }
@@ -105,7 +102,7 @@ namespace Sa_Turno_BackEnd.Controllers
         {
             try
             {
-                List<Servicio> servicios = _servicioRepository.Delete(id);
+                List<Service> servicios = _serviceRepository.Delete(id);
                 List<Sa_Turno_BackEnd.Models.ServicioResponse> response = new List<Sa_Turno_BackEnd.Models.ServicioResponse>();
                 return Ok("Servicio ID" + "["+ id +"]"+ "---> Eliminado correctamente.");
             }

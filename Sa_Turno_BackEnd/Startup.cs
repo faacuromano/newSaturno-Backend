@@ -87,7 +87,7 @@ namespace Sa_Turno_BackEnd
             #region Injection
             builder.Services.AddSingleton<IClientRepository, ClientRepository>();
             builder.Services.AddSingleton<ITurnoRepository, TurnoRepository>();
-            builder.Services.AddSingleton<IServicioRepository, ServicioRepository>();
+            builder.Services.AddSingleton<IServiceRepository, ServiceRepository>();
             #endregion       
             
         }
